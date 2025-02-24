@@ -1,21 +1,26 @@
-//Базовые арифметические операторы
-const a = 1;
-const b = 2;
-const c = 3;
-const d = 4;
-const e = 5;
-const f = 6;
-const g = 7;
-console.log(a + b);
-console.log(a - b);
-console.log(a * b);
-console.log(a / b);
-console.log(b ** c); // 2 в третьей степени. 2х2х2
+//Операторы присваивания
+let age = 18 + 2;
+console.log(age);
+age += 2; // age = age + 2 
+console.log(age);
+age -= 2; // age = age - 2 
+console.log(age);
+age *= 2; // age = age * 2 
+console.log(age);
+age /= 2; // age = age / 2 
+console.log(age);
+age ++; // age = age + 1 
+console.log(age);
+age --; // age = age - 1 
+console.log(age);
 
-//Строки
-const city = 'Москва'
-const street = 'Новгородская'
-const adres = city +', '+ street +', 5'
-console.log(adres);
+//Операторы сравнения
+
+const vasya = 20
+console.log(age > vasya);
+console.log(age >= vasya);
+console.log(age < vasya);
+console.log(age <= vasya);
+console.log(age == vasya);
 
 
