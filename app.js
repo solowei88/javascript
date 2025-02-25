@@ -1,26 +1,23 @@
 //Операторы присваивания
-let age = 18 + 2;
-console.log(age);
-age += 2; // age = age + 2 
-console.log(age);
-age -= 2; // age = age - 2 
-console.log(age);
-age *= 2; // age = age * 2 
-console.log(age);
-age /= 2; // age = age / 2 
-console.log(age);
-age ++; // age = age + 1 
-console.log(age);
-age --; // age = age - 1 
-console.log(age);
+let a = 5;
+let b = 5.6;
 
-//Операторы сравнения
+console.log(typeof a);
 
-const vasya = 20
-console.log(age > vasya);
-console.log(age >= vasya);
-console.log(age < vasya);
-console.log(age <= vasya);
-console.log(age == vasya);
+a = 'string';
+console.log(typeof a);
 
+let isAdmin = false;
+console.log(typeof isAdmin);
 
+let c;
+console.log(typeof c);
+
+c = 5;
+console.log(typeof c);
+
+let d = null;
+console.log(typeof d);
+
+let e = 'str';
+console.log(typeof e);
