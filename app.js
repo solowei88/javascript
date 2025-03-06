@@ -1,23 +1,23 @@
-//Операторы присваивания
-let a = 5;
-let b = 5.6;
+/*
+Ваша часовая ставка 80$ и вы готовы работать не
+более 5 часов в день 5 дней в неделю (кроме выходных).
+К вам приходит заказчик и предлагает заказ на 40
+часов работы.
+Сейчас понедельник.
+Вы должны уехать через 11 дней.
+Выведете в консоль:
+- Boolean переменную успеете ли вы взяться за работу
+- Сколько вы за неё попросите?
+*/
 
-console.log(typeof a);
+let day = 40 / 5; 
 
-a = 'string';
-console.log(typeof a);
+if (day < 11 - 2) {
+  let money = 40 * 80;
+  console.log('приступлю к работе? ' + true);
+  console.log('попрошу за работу ' + money + '$'); 
+} 
+else {
+  console.log('приступлю к работе? ' + false); 
+}
 
-let isAdmin = false;
-console.log(typeof isAdmin);
-
-let c;
-console.log(typeof c);
-
-c = 5;
-console.log(typeof c);
-
-let d = null;
-console.log(typeof d);
-
-let e = 'str';
-console.log(typeof e);
