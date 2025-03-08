@@ -1,23 +1,22 @@
 /*
 Шаблонные строки
 */
-const progectName = 'Сайт магазина'; 
-const price = 2000;
-const author = 'Василий Пупкин';
-const template = author + ' заказал ' + progectName + ' за ' + price + '$';
+const age = '18'
+console.log(Number(age) + 5);
+console.log(age - 5 );
+console.log(age * 5);
+console.log(age / 5);
 
-console.log(template);
+const userName = 'Вася';
+console.log(Number(userName) + 5);
+console.log(typeof NaN);
 
-const template2 = `${author} заказал ${progectName} за ${price}$`;
+console.log(String(4) + 5);
+console.log(Boolean(''));
+console.log(Boolean('dsgsg'));
+console.log(Boolean('dsgsg'));
+console.log(Boolean(0));
+console.log(Boolean(-12));
 
-console.log(template2);
-
-const template3 = 'Проект \n' + 'Цена ' + price + '$';
-
-console.log(template3);
-
-const template4 = `Проект 
-Цена ${price}$`;
-
-console.log(template4);
-  
+const a = 2 +'10';
+console.log(a -10);
