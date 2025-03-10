@@ -1,58 +1,22 @@
 /*
-Switch
+Тернарные операторы
 */
 
-const role = 'Admin';
+const bmwX3Price = 100000;
+const fordFocusPrice = 10000;
+const budget = 20000;
 
-
-if (role === 'Admin') {
-    console.log('Admin');
-} else if (role === 'Manager'){
-    console.log('Manager');
-} else if (role === 'Seo'){
-    console.log('Seo');
+let message; 
+if (budget > bmwX3Price) {
+    message ='bmw';
+} else if (budget > fordFocusPrice){
+    message = 'Ford Focus';
 } else {
-    console.log('не угадал');
+    message = 'Велосипед';
 }
 
-switch (role) {
-    case('Admin'):
-        console.log('Admin');
-        break;
-    case('Manager'):
-        console.log('Manager');
-        break;
-    case('Seo'):
-        console.log('Seo');
-        break;
-    default:
-        console.log('Мы тебя не знаем');
-}
+console.log (`Я хочу купить ${message}`);
 
-switch (role) {
-    case('Admin'):
-        console.log('Admin');
-    case('Manager'):
-        console.log('Не руководитель');
-        break;
-    case('Seo'):
-        console.log('Seo');
-        console.log('Руководитель');
-        break;
-    default:
-        console.log('Мы тебя не знаем');
-}
+console.log (`Я хочу купить ${budget > bmwX3Price ? message : 'Велосипед'}`);
+console.log (`Я хочу купить ${budget > bmwX3Price ? message : budget > fordFocusPrice ? message : message}`);
 
-
-const num = 2;
-
-switch (true) {
-    case(num > 0):
-        console.log('Положительное число');
-        break;
-    case(num < 0):
-        console.log('Отрицательное число');
-        break;
-    default:
-        console.log('Ноль');
-}
