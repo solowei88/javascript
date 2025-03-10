@@ -1,17 +1,16 @@
 /*
-If else
+Упражнение - Размещение депозита
 */
 
-const money = 100;
-//const maybeBuy = money > 50; 
+let deposit = 12000;
+let result = deposit * (1 + 0.07 / 12) ** 24;
 
-if (money > 50) {
-    console.log('Может купить наш продукт');
-} else if (money > 5) {
-    console.log('Курлен мини продукт');
+
+if (result > 13500) {
+    console.log(`Может купить и у него останется ${result - 13500}$`);
 } else {
     console.log('Не хватает денег');
 }
-console.log('Итог');
+
 
 
