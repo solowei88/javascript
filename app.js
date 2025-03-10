@@ -1,22 +1,36 @@
 /*
-Тернарные операторы
+Упражнение - Проверка робота
 */
 
-const bmwX3Price = 100000;
-const fordFocusPrice = 10000;
-const budget = 20000;
+let res = prompt ('Сколько будет 7 + или - 15');
+
 
 let message; 
-if (budget > bmwX3Price) {
-    message ='bmw';
-} else if (budget > fordFocusPrice){
-    message = 'Ford Focus';
+/*
+if (res ==='Я не робот') {
+    message = 'Успех';
+} else if (Number(res) === (7 + 15)){
+    message = 'Успех';
+} else if (Number(res) === (7 - 15)){
+    message = 'Успех';
 } else {
-    message = 'Велосипед';
+    message = 'Вы робот';
+}
+*/
+switch (true) {
+    case res === "Я не робот": // Проверка на строку "Я не робот"
+        message = 'Успех';
+    case Number(res) === 7 + 15: // Проверка на 22
+    case Number(res) === 7 - 15: // Проверка на -8
+        message = 'Успех';
+        break;
+    default:
+        message = 'Вы робот';
+        break;
 }
 
-console.log (`Я хочу купить ${message}`);
 
-console.log (`Я хочу купить ${budget > bmwX3Price ? message : 'Велосипед'}`);
-console.log (`Я хочу купить ${budget > bmwX3Price ? message : budget > fordFocusPrice ? message : message}`);
+console.log (res);
+console.log (` ${message}`);
+
 
