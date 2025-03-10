@@ -1,16 +1,21 @@
 /*
-Упражнение - Размещение депозита
+Операторы равенства
 */
 
-let deposit = 12000;
-let result = deposit * (1 + 0.07 / 12) ** 24;
+const sekretNamber = '7';
 
 
-if (result > 13500) {
-    console.log(`Может купить и у него останется ${result - 13500}$`);
+if (sekretNamber === 7) {
+    console.log('Угадал строго');
+} else if (sekretNamber == 7){
+    console.log('Угадал не строго');
 } else {
-    console.log('Не хватает денег');
+    console.log('не угодал');
 }
 
+const q = Number(prompt('введите число'));
+if (q === 7) {
+    console.log('Угадал строго');
+}
 
 
