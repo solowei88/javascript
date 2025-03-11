@@ -1,22 +1,11 @@
 /*
-Операторы с другими типами
+Оператор нулевого слияния
 */
 
-console.log ('Вася' || 'Олег'); // или
-console.log (false || 'Олег');
-console.log ('Вася' || false);
-console.log (false || false);
 
-console.log ('Вася' && 'Олег');
-console.log (false && 'Олег');
-console.log ('Вася' && false);
-console.log (false && false);
+let age = 0;
 
-let a = 'Марина';
-const userName = a || 'Петя';
-console.log (userName);
+console.log (age || 18);
+console.log (age ?? 18);
 
-const isAdmin = true;
-const fileName = isAdmin && 'file.mp4';
-console.log (fileName);
 
