@@ -1,12 +1,22 @@
 /*
-Логические операторы
+Операторы с другими типами
 */
 
+console.log ('Вася' || 'Олег'); // или
+console.log (false || 'Олег');
+console.log ('Вася' || false);
+console.log (false || false);
+
+console.log ('Вася' && 'Олег');
+console.log (false && 'Олег');
+console.log ('Вася' && false);
+console.log (false && false);
+
+let a = 'Марина';
+const userName = a || 'Петя';
+console.log (userName);
+
 const isAdmin = true;
-const canWrite = false;
-
-console.log (`Системный файл ${isAdmin && canWrite}`); // и
-console.log (`Обычный файл ${isAdmin || canWrite}`); // или
-console.log (`Инвертируем права админа ${!isAdmin}`); // не
-
+const fileName = isAdmin && 'file.mp4';
+console.log (fileName);
 
