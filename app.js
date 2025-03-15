@@ -1,19 +1,37 @@
 /*
  Упражнение - Проверка прав
 */
-
-
-const balance = 1000;
-const bonusBalance = 10;
-const isBanned = false;
-const isExist = false;
-const isSelling = true;
-
-if ((balance >= 1000 || bonusBalance >= 100) && !isBanned  && !isExist && isSelling){
-    console.log ('Покупаем');
-} else {
-    console.log (' Не покупаем');
+/*
+function logName (name, surname) {
+    console.log (`My name is ${name} ${surname}`);
 }
+
+logName ('Alexey', 'Ernst');
+logName (1, 3);
+*/
+function countDepositSum (depositUSD, month, rate) {
+    let sum = depositUSD * (1 + rate / 12) ** month;
+    
+    return sum;
+}
+/* вариант 2 
+function countDepositSum (depositUSD, month, rate) {
+    return depositUSD * (1 + rate / 12) ** month;
+
+}
+*/
+
+const output1 = countDepositSum (1000,24,0.12);
+
+console.log (`My name is ${output1}`);
+
+const output2 = countDepositSum (1000,36,0.12);
+
+console.log (`My name is ${output2}`);
+
+
+    
+
 
 
 
