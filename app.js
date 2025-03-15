@@ -1,17 +1,17 @@
 /*
-Упражнение - Упрощение функции
+Параметры по умолчанию
 */
 
-function toPower(num, power) {
+function toPower(num =3 , power = 2) {
     const res = num ** power;
     return res;
 }
 
-console.log (toPower (2,4));
+console.log (toPower (2,3));
+console.log (toPower (2));
+console.log (toPower ());
 
-const toPowerArrow = (num, power) => num ** power;
 
-console.log (toPowerArrow (2,4));
 
 
 
