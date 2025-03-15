@@ -1,16 +1,17 @@
 /*
-Стрелочные функции
+Упражнение - Упрощение функции
 */
 
-function powerOfTwo (num) {
-    return num * num;
+function toPower(num, power) {
+    const res = num ** power;
+    return res;
 }
 
-console.log (powerOfTwo (4));
+console.log (toPower (2,4));
 
-const poft = num => num * num;
+const toPowerArrow = (num, power) => num ** power;
 
-console.log (poft (5));
+console.log (toPowerArrow (2,4));
 
 
 
