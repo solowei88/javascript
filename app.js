@@ -1,21 +1,21 @@
 /*
-Управление элементами массива
+Поиск элемента
 */
-const users = ['Вася', 'Петя', 'Гриша']
-console.log (users);
-users [2] = 'Маша'
-console.log (users);
 
-users.push('Марина') // добавляет элемент в конец массива
-console.log (users);
+const roles = ['user', 'admin', 'mansger',];
+const elIndex = roles.indexOf('admin'); // ищем индекс елемента и присваиваем его переменной
+console.log (elIndex);
 
-users.unshift('Ирина')// добавляет элемент в начало массива
-console.log (users); 
+const elIndex2 = roles.indexOf('superuser'); // ищем индекс елемента и присваиваем его переменной. -1, если не находим
+console.log (elIndex2);
 
-const element = users.pop();    // удаляет последний элемент массива и присваивает его переменной
-console.log (users);
-console.log ('Удалённый элемент: '+ element );
+if (roles.indexOf('admin') >= 0) { // проверяем есть ли элемент в массиве
+    console.log ('Доступ есть');
+}
 
-const element2 = users.shift();    // удаляет первый элемент массива и присваивает его переменной
-console.log (users);
-console.log ('Удалённый элемент: '+ element2 );
+console.log (roles.includes('admin')); // проверяем есть ли элемент в массиве другим способом
+console.log (roles.includes('superuser')); // проверяем есть ли элемент в массиве другим способом
+
+if (roles.includes('admin')) { // проверяем есть ли элемент в массиве
+    console.log ('Доступ есть');
+} 
