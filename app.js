@@ -1,27 +1,21 @@
 /*
-Знакомство с массивами
+Управление элементами массива
 */
+const users = ['Вася', 'Петя', 'Гриша']
+console.log (users);
+users [2] = 'Маша'
+console.log (users);
 
-const role1 = 'admin';
-const role2 = 'user';
-const role3 = 'superuser';
+users.push('Марина') // добавляет элемент в конец массива
+console.log (users);
 
-const roles = ['addmin', 'user','superuser'];
+users.unshift('Ирина')// добавляет элемент в начало массива
+console.log (users); 
 
-console.log (roles);
-console.log (roles[0]);
-console.log (roles.length);
-console.log (roles[roles.length-1]);
+const element = users.pop();    // удаляет последний элемент массива и присваивает его переменной
+console.log (users);
+console.log ('Удалённый элемент: '+ element );
 
-console.log (roles.at(0));
-console.log (roles.at(-1));
-
-
-const userAge = [2034 - 2022, 5 - '3', 5 > 10 ? 4 : 2]
-
-console.log (userAge);
-
-const userNames = new Array('Вася', 'Петя', 'Гриша');
-
-console.log (userNames);
-
+const element2 = users.shift();    // удаляет первый элемент массива и присваивает его переменной
+console.log (users);
+console.log ('Удалённый элемент: '+ element2 );
