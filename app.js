@@ -1,16 +1,23 @@
 /*
-Параметры по умолчанию
+Условия в функциях
 */
 
-function toPower(num =3 , power = 2) {
-    const res = num ** power;
-    return res;
+function canAccessWebsite(age) {
+    if (age < 18) {
+        return false;
+    } else {
+        return true;
+    }
+    
 }
 
-console.log (toPower (2,3));
-console.log (toPower (2));
-console.log (toPower ());
+const canAccessWebsite2 = age => age < 18 ? false : true ;
 
+console.log (canAccessWebsite(10));
+console.log (canAccessWebsite(20));
+
+console.log (canAccessWebsite2(10));
+console.log (canAccessWebsite2(20));
 
 
 
