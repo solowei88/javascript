@@ -1,49 +1,27 @@
 /*
-Упражнение - Кредит на MacBook
+Знакомство с массивами
 */
-/*
-	Пользователь:
-	- Возраст
-	- Наличие работы
-	- Деньги
-	Нужно проверить может ли он купить новый MacBook за 2000$?
-	Он может брать не только свои деньги, но и взять кредит.
-	Ему дадут 500$, только если ему больше 24-х лет и он
-	имеет работу, 100$ если ему просто больше 24-х лет и 0 в
-	ином случае.
-	Напишите функцию, которая принимает данные пользователя
-	и товара и возвращает true или false;
-*/
-const AGE = 25;
-const WORK = false;
-const MONEY = 1900;
-const CREDIT = creditUSD(AGE,WORK)
 
-function creditUSD (age, work){
-    if (age > 24 && work === true){
-        return 500;
-    } else if (AGE > 24){
-        return 100;
-    } else {
-        return 0;
-    }
-    
-}
+const role1 = 'admin';
+const role2 = 'user';
+const role3 = 'superuser';
+
+const roles = ['addmin', 'user','superuser'];
+
+console.log (roles);
+console.log (roles[0]);
+console.log (roles.length);
+console.log (roles[roles.length-1]);
+
+console.log (roles.at(0));
+console.log (roles.at(-1));
 
 
-function calculation (money) {
-    if (money >= 2000) {
-        return true;
-    } else if (money + CREDIT >= 2000){
-        return true;
-    } else {
-        return false;
-    }
-}
+const userAge = [2034 - 2022, 5 - '3', 5 > 10 ? 4 : 2]
 
-console.log (creditUSD(AGE,WORK));
-console.log (calculation(MONEY));
+console.log (userAge);
 
+const userNames = new Array('Вася', 'Петя', 'Гриша');
 
-
+console.log (userNames);
 
