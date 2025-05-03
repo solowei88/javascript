@@ -1,21 +1,39 @@
 /*
-Поиск элемента
+Slice, splice, concat, reverse
 */
 
-const roles = ['user', 'admin', 'mansger',];
-const elIndex = roles.indexOf('admin'); // ищем индекс елемента и присваиваем его переменной
-console.log (elIndex);
+const roles = ['user', 'admin', 'manager', 'superuser'];
+const res = roles.slice(2);     //берёт элементы, но не вырезает из массива
+console.log (roles);
+console.log (res);
 
-const elIndex2 = roles.indexOf('superuser'); // ищем индекс елемента и присваиваем его переменной. -1, если не находим
-console.log (elIndex2);
+const res2 = roles.slice(0, 3);  //берёт элементы, но не вырезает из массива
+console.log (roles);
+console.log (res2);
 
-if (roles.indexOf('admin') >= 0) { // проверяем есть ли элемент в массиве
-    console.log ('Доступ есть');
-}
+const res3 = roles.slice(-1);    //берёт последний элемент, но не вырезает из массива
+console.log (roles);
+console.log (res3);
 
-console.log (roles.includes('admin')); // проверяем есть ли элемент в массиве другим способом
-console.log (roles.includes('superuser')); // проверяем есть ли элемент в массиве другим способом
+const res4 = roles.slice(1,-1);  //берёт элементы, но не вырезает из массива
+console.log (roles);
+console.log (res4);
 
-if (roles.includes('admin')) { // проверяем есть ли элемент в массиве
-    console.log ('Доступ есть');
-} 
+//const res5 = roles.splice(2);     //вырезает элементы из массива
+//console.log (roles);
+//console.log (res5);
+//console.log (roles);
+
+// const res6 = roles.splice(2, 2); //вырезает элементы из массива
+// console.log (roles);
+// console.log (res6);
+// console.log (roles);
+
+console.log (roles);
+const res8 = roles.reverse(); // Меняет элементы массива задом на перёд
+console.log (roles);
+
+const NEW_ROLES = ['sysadmin','developer']
+const res9 = roles.concat(NEW_ROLES)  //Соединяет массивы
+
+console.log (res9);
