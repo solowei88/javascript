@@ -1,14 +1,12 @@
 /*
-Деструктуризация
+Rest оператор
 */
 
-const userData = ['Anton', 18, 'Moskoy'];
+const data = [1, 2, 3, 4, 5, 6,];
 
-// const userName = userData[0];
-// const userAge = userData[1];
-// const userCiti = userData[2];
+const [one, two, ...remainder] = data;
 
-const[userName, _, userCiti] = userData; // получаем переменные из массива
-// (если нам не нужен какой-то элемент, обьявляем переменную с нижним подчёркиванием)
-console.log(userName, userCiti)
+
+console.log(one, two); // две переменные
+console.log(remainder); // остальной массив
 
