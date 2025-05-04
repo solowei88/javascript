@@ -1,5 +1,5 @@
 /*
-Упражнение - Обновление списка задач
+Принцип DRY
 */
 
 /*
@@ -34,37 +34,34 @@ const tasks = ['Задача 1'];
 // }
 
 // console.log(tasks);
-const task = [];
-function add(tasks){
-    task.push(tasks);
-    return task;
+const tasks= ['Задача 1', 'Задача 2', 'Задача 3'];
+function add(task){
+    tasks.push(task);    
 }
-add('Задача 1');
-add('Задача 2');
-console.log(add('Задача 3'));
+add('Задача 4');
+add('Задача 5');
+console.log(tasks);
 
-const mas = ['Задача 1', 'Задача 2', 'Задача 3'];
-function delTask(task1){
-    const search = mas.indexOf(task1);
-    if (search !== -1) {
-        mas.splice(search, 1);
-        return mas;
+function Remove(task){
+    const search = tasks.indexOf(task);
+    if (search === -1) {
+        return;
     }
+    return tasks.splice(search, 1);
 }
-delTask('Задача 6');
-delTask('Задача 3');
-console.log(mas);
+Remove('Задача 6');
+Remove('Задача 3');
+console.log(tasks);
 
-const mas2 = ['Задача 1', 'Задача 2', 'Задача 3'];
 
-function taskPerenos(task2){
-    const search2 = mas2.indexOf(task2);
-    if (search2 !== -1) {
-        mas2.splice(search2, 1);
-        mas2.unshift (task2)
-        return mas2;
+
+function Prioritize(task){
+    const result = Remove(task);
+    if (!result){
+        return;
     }
+    return tasks.unshift(result[0]);
 }
 
-taskPerenos('Задача 2');
-console.log(mas2);
+Prioritize('Задача 2');
+console.log(tasks);
