@@ -1,16 +1,20 @@
 /*
-Упражнение - Цикл в обратном порядке
+Цикл в цикле
 */
-const ARR = ['!', 'js', 'люблю', 'Я'];
-const RESULT_ARRAY = [];
-for (i = ARR.length - 1 ; i >= 0; i--){    
-    RESULT_ARRAY.push(ARR[i])    
+
+// for (i = 1 ; i < 5; i++){    
+//     console.log(`Цикл 1 - ${i}`);  
+//     for (j = 0 ; j < 5; j++){
+//         console.log(`Цикл 2 - ${j}`);
+//     }
+       
+// }
+const tasks = [[1,'Задача 1'], [2,'Задача 2']];
+
+for (i = 0 ; i < tasks.length ; i++){     
+    for (j = 0 ; j < tasks[i].length; j++) {
+        console.log(tasks[i][j]);
+    }
+       
 }
-const ARR3 = RESULT_ARRAY.join(" ");
-console.log(ARR3);
-
-console.log(ARR.reverse().join(" ")); //то же самое через методы reverse().join(" ")
-
-
-
 
