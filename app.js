@@ -1,12 +1,26 @@
 /*
-Rest оператор
+Упражнение - Функция разбора URL
+Нужно разделить URL на протокол, доменное имя и на остальной путь внутри сайта.
 */
 
-const data = [1, 2, 3, 4, 5, 6,];
+const url = 'https://www.fl.ru/freelancers/messengers/';
 
-const [one, two, ...remainder] = data;
+function parsingURL(url){
+    const[protokol, _, dom, ...path] = url.split("/");
+    if(protokol === 'http:' || protokol === 'https:'){
+        if (!dom.includes(".")){
+            return;
+        }
+        console.log(`Протокол: ${protokol.split(':')[0]}`);
+        console.log(`Домен: ${dom}`);
+        console.log(`Адрес: ${path.join('/')}`);   
+    }
+    
+}
+
+parsingURL(url);
+parsingURL('https://www.youtube.com/');
 
 
-console.log(one, two); // две переменные
-console.log(remainder); // остальной массив
+
 
