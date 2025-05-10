@@ -1,37 +1,23 @@
 /*
-Функции высшего порядка. Callback.
+Возврат функции.
 */
 
 
 
 
-function positive(a, b){
-    const res = a + b ;
-    return res;       
+function power(pow){      
+    
+    return function(num) {
+        return num**pow;
+    }    
 }
 
-function negative(a, b){
-    const res = a - b ;
-    return res;       
-}
+const powerOfTwo = power(2); // кладём функцию в константу
+console.log(powerOfTwo(3));
+console.log(powerOfTwo(4));
 
-function umnojenie(a, b){
-    const res = a * b ;
-    return res;       
-}
+const powerOfTree = power(3);
+console.log(powerOfTree(3));
+console.log(powerOfTree(5));
 
-function delenie(a, b){
-    const res = a / b ;
-    return res;       
-}
-
-function callback(a, b, fn){ //функция высшего порядка (принимает другую функцию)
-    console.log(fn.name);
-    const res = fn(a,b);
-    return res;       
-}
-
-console.log(callback(2, 3, delenie));
-console.log(callback(2, 3, umnojenie));
-console.log(callback(2, 3, negative));
-console.log(callback(2, 3, positive));
+console.log(power(5)(4));  // передаём аргументы в две функции
