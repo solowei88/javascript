@@ -2,28 +2,9 @@
 filter
 */
 
-const operations = [100, -7, 70, -10, 100];
+const operations = [[100, 200], [120, 100], [200, 350]];
 
-// const pozitiveOperations =[];
+let result = operations.filter(subArray => subArray[0] < subArray[1]) // Отфильтровываем подмассивы по условию
+                      .map(subArray => subArray[1] - subArray[0]); // Создаём новый массив с разницей
 
-// for (const operation of operations) {
-//   if (operation > 0){
-//     pozitiveOperations.push(operation);
-//   }
-  
-// }
-// console.log(pozitiveOperations);
-
-const pozitiveOperations = operations.filter(operation => {
-  return operation > 0;
-})
-console.log(pozitiveOperations);
-
-const pozitiveRUBOperations = operations
-.filter(operation => {
-  return operation > 0;
-})
-.map(operation => {
-  return operation * 80;
-})
-console.log(pozitiveRUBOperations);
+console.log(result); // Вывод результата
