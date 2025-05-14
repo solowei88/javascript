@@ -1,10 +1,26 @@
 /*
-filter
+reduce
 */
 
-const operations = [[100, 200], [120, 100], [200, 350]];
+const operations = [100, 200, -120, 100, -200, 350];
 
-let result = operations.filter(subArray => subArray[0] < subArray[1]) // Отфильтровываем подмассивы по условию
-                      .map(subArray => subArray[1] - subArray[0]); // Создаём новый массив с разницей
+let summ = 0;
+for (money of operations){
+    summ += money;
+    console.log(summ)
+}
 
-console.log(result); // Вывод результата
+const finalBalanse = operations.reduce((acc, value, i) =>{
+    return acc += value;
+},0)
+console.log(finalBalanse);
+
+const minElement = operations.reduce((acc, value, i) =>{
+    if (acc < value){
+        return acc ;
+    } else {
+       return value ; 
+    }
+    
+},0)
+console.log(minElement);
