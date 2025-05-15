@@ -1,15 +1,33 @@
 /*
-flat и flatMap
+sort
 */
 
-const prices = [[100, 200], [120, 300], [350,[250, 300]]];
+const users = ['Вася', 'Петя', 'Маша', 'Глаша'];
 
-const res = prices.flat(10);
-const res2 = prices.flatMap(el => el.concat(444));
+console.log(users);
 
+users.sort(); // сортировка по алфавиту
 
-console.log(res);
-console.log(res2);
+console.log(users);
+
+const operations = [100, -300, -100, 50, 480];
+
+console.log(operations);
+
+operations.sort((a, b) => {  // сортировка по убыванию
+    if(a < b){
+        return 1;
+    }
+    if(a > b) {
+        return -1;
+    }
+});
+
+console.log(operations);
+
+operations.sort((a, b) => a - b); // сортировка по возростанию
+
+console.log(operations);
 
 
 
