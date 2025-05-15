@@ -1,22 +1,15 @@
 /*
-Упражнение - реализация some
+flat и flatMap
 */
 
-const operations = [100, 200, -120, 300, -200, 350, 'привет'];
+const prices = [[100, 200], [120, 300], [350,[250, 300]]];
+
+const res = prices.flat(10);
+const res2 = prices.flatMap(el => el.concat(444));
 
 
-function some(arr, element){
-    if(arr.find(el => el === element)){
-        return true;
-    } else {
-        return false;
-    }
-}
-
-console.log(some(operations, 'привет'));
-
-
-console.log(operations.some(el => el === -120));
+console.log(res);
+console.log(res2);
 
 
 
