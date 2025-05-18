@@ -1,17 +1,16 @@
 /*
-Базовые методы
+ Упражнение - выделение имени
 */
 
-const userName = 'Вася Пупкина'
-console.log(userName[0]);
-console.log(userName[1]);
-console.log(userName[2]);
-console.log(userName.charAt(2));
-console.log(userName.length);
-console.log(userName.indexOf('уп'));
-console.log(userName.lastIndexOf('а'));
-console.log(userName.includes('уп'));
-console.log(userName.slice(6));
-console.log(userName.slice(5, 8));
+const userName = 'Вася aka Terminator Пупкин'
+
+const userName1 = userName.slice(0, userName.indexOf(' '));
+console.log(userName1);
+
+const userName2 = userName.slice(userName.lastIndexOf(' ') + 1);
+console.log(userName2);
+
+const fullUserName = `${userName1} ${userName2}`;
+console.log(fullUserName);
 
 
