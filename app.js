@@ -1,28 +1,35 @@
 /*
-Преобразование строки 
+Упражнение - проверка номера
 */
 
-const str = 'Вася Пупкина';
+
+function isPhoneNumber(num){
+    num = num.trim();
+    num = num.replace('+7', '8');
+    if (!num.startsWith('8')) {
+        return false;
+    } 
+    num = num.replaceAll(')', '');
+    num = num.replaceAll('(', '');
+    num = num.replaceAll('-', '');
+    num = num.replaceAll(' ', '');
+    if ( num.length != 11 ){
+        return false;
+    }
+    if (isNaN(Number(num))){
+        return false;
+    } else {
+        return true;
+    }
+}
 
 
-
-console.log(str.includes('а'));
-console.log(str.startsWith('В'));
-console.log(str.endsWith('н'));
-
-console.log(str.toLowerCase());
-console.log(str.toUpperCase());
-console.log(str.replace('В', 'Ф'));
-console.log(str.replaceAll('а', 'и'));
-console.log(str.replace(/a/g, 'и'));
-
-console.log(str.replaceAll('а', 'и'));
-
-const str2 = '  Вася Пупкин    \n ';
-console.log(str2.trim());
-console.log(str2.trimEnd());
-console.log(str2.trimStart());
-
+ 
+console.log(isPhoneNumber('+79951435596')); // true
+console.log(isPhoneNumber('89951435596'));  // true
+console.log(isPhoneNumber('+89951435596')); //false
+console.log(isPhoneNumber('89951gfg35596'));//false
+console.log(isPhoneNumber('+7995143'));     //false
 
 
 
