@@ -2,19 +2,28 @@
 Преобразование строки 
 */
 
-const userName = 'Вася aka Terminator Пупкин'
+const str = 'Вася Пупкина';
 
-const userName1 = userName.slice(0, userName.indexOf(' '));
 
-console.log(userName1);
 
-const userName2 = userName.slice(userName.lastIndexOf(' ') + 1);
+console.log(str.includes('а'));
+console.log(str.startsWith('В'));
+console.log(str.endsWith('н'));
 
-console.log(userName2);
+console.log(str.toLowerCase());
+console.log(str.toUpperCase());
+console.log(str.replace('В', 'Ф'));
+console.log(str.replaceAll('а', 'и'));
+console.log(str.replace(/a/g, 'и'));
 
-const fullUserName = `${userName1} ${userName2}`;
+console.log(str.replaceAll('а', 'и'));
 
-console.log(fullUserName); 
+const str2 = '  Вася Пупкин    \n ';
+console.log(str2.trim());
+console.log(str2.trimEnd());
+console.log(str2.trimStart());
+
+
 
 
    
