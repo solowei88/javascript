@@ -1,12 +1,15 @@
 /*
-Дополнение строк
+Упражнение - маскировка карты
 */
 
-const film = 'Звездные воины ';
-console.log(film.padStart(50, '*')); 
-console.log(film.padEnd(50, '*'));
-console.log(film.repeat(5));
 
+
+function mapMasking(num){
+    let card = String(num);
+    return card.slice(12).padStart(16,'*')
+}
+
+console.log(mapMasking(1234567854325678)); // вывод: ************5678
 
 
 
