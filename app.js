@@ -1,16 +1,20 @@
 /*
-Упражнение - маскировка карты
+Знакомство с объектами
 */
 
 
+const userArrey = ['Вася','Пупкин', 24];
 
-function mapMasking(num){
-    let card = String(num);
-    return card.slice(12).padStart(16,'*')
-}
-
-console.log(mapMasking(1234567854325678)); // вывод: ************5678
-
+const user = {
+    name: 'Вася', 
+    surname:'Пупкин',
+    age: 24,
+    skills: [
+        'Программирование', 'готовка'
+    ],
+    1:1
+};
+console.log(user);
 
 
 
