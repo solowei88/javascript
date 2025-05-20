@@ -1,35 +1,18 @@
 /*
-Упражнение - проверка номера
+Строки и массивы
 */
 
+const userFullName = 'Пупкин Василий Петрович';
+console.log(userFullName.split(' ')); 
+const [familyName, firstName, lastName] = userFullName.split(' '); // разделяет строку на переменные
+console.log(familyName); 
+console.log(firstName);
+console.log(lastName);
 
-function isPhoneNumber(num){
-    num = num.trim();
-    num = num.replace('+7', '8');
-    if (!num.startsWith('8')) {
-        return false;
-    } 
-    num = num.replaceAll(')', '');
-    num = num.replaceAll('(', '');
-    num = num.replaceAll('-', '');
-    num = num.replaceAll(' ', '');
-    if ( num.length != 11 ){
-        return false;
-    }
-    if (isNaN(Number(num))){
-        return false;
-    } else {
-        return true;
-    }
-}
+const arr = ['Ты','знаешь','JS']; 
+console.log(arr.join(' ')); // соединяем массив в строку
 
 
- 
-console.log(isPhoneNumber('+79951435596')); // true
-console.log(isPhoneNumber('89951435596'));  // true
-console.log(isPhoneNumber('+89951435596')); //false
-console.log(isPhoneNumber('89951gfg35596'));//false
-console.log(isPhoneNumber('+7995143'));     //false
 
 
 
