@@ -1,16 +1,11 @@
 /*
-Строки и массивы
+Дополнение строк
 */
 
-const userFullName = 'Пупкин Василий Петрович';
-console.log(userFullName.split(' ')); 
-const [familyName, firstName, lastName] = userFullName.split(' '); // разделяет строку на переменные
-console.log(familyName); 
-console.log(firstName);
-console.log(lastName);
-
-const arr = ['Ты','знаешь','JS']; 
-console.log(arr.join(' ')); // соединяем массив в строку
+const film = 'Звездные воины ';
+console.log(film.padStart(50, '*')); 
+console.log(film.padEnd(50, '*'));
+console.log(film.repeat(5));
 
 
 
