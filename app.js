@@ -1,26 +1,19 @@
 /*
-Упражнение - преобразование объектов
+Методы объектов
 */
 
 
-const users = [
+const user = 
     {
         name: 'Вася',
         surname: 'Пупкин', 
         age: 54,
-        skills: ['Разработка', 'DevOps']
-    },
-    {
-        name: 'Катя', 
-        surname: 'Пупкина',
-        age: 34,
-        skills: ['Разработка', 'DevOps']
-    },
-     
-];
+        getFullName: function () {
+            console.log(this);
+            return this.name + ' ' + this.surname;
+        }
+    }
+;
 
-console.log(users.map(user => ({
-    fullName: `${user.name} ${user.surname}`, 
-    skillNum: `${user.skills.length}`
-})));
+console.log(user.getFullName());
 
