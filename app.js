@@ -1,19 +1,47 @@
 /*
-Методы объектов
+Упражнение - кошелёк
 */
 
 
-const user = 
+const wallet = 
     {
-        name: 'Вася',
-        surname: 'Пупкин', 
-        age: 54,
-        getFullName: function () {
-            console.log(this);
-            return this.name + ' ' + this.surname;
-        }
+        balance: 0,
+        operations: [], 
+
+        positive: function (description, sum) {
+            this.balance = this.balance + sum;
+            const operation = ['операция: ' + description, 'сумма: ' + sum];
+        this.operations.push(operation);
+        return true;
+        },
+
+        negative: function (description, sum) {
+            if (this.balance < sum ){
+                console.log('Недостаточно средств');
+                return false;
+            }
+            this.balance -= sum;
+            const operation = ['операция: ' + description, 'сумма: ' + sum];
+            this.operations.push({
+                операция: description,
+                сумма: sum,
+            });
+            return true;
+            
+        },
+        
+        identificaton: function () {
+            return this.operations.length;
+        },
+            
+        
     }
 ;
+wallet.positive('sgs', 65);
+console.log(wallet.balance);
+wallet.negative('sgsв', 64);
 
-console.log(user.getFullName());
+console.log(wallet.balance);
+console.log(wallet.operations);
+console.log(wallet.identificaton());
 
