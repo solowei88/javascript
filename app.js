@@ -1,30 +1,28 @@
 /*
-Итерирование по объекту
+Деструктуризация и rest
 */
 
 
-const cities = {
-      msk:{
-        temp: 25,
-        lt: 200
-      },
-      spb:{
-        temp: 20,
-        lt: 100
-      }
-       
-}
-let sumTemp = 0;
-let citiesCount = Object.keys(cities).length;
-// // for (const key in cities){
-// //   console.log(key);
-// //   sumTemp += cities[key].temp;
-// // }
+let user = {
+  name: 'Вася',
+  age: 40,
+  citi: 'Moskow'
+};
 
-// console.log(sumTemp/citiesCount);
+const {citi, ...userWithouCiti } = user;
+console.log(citi);
+console.log(userWithouCiti);
 
-for (const key of Object.keys(cities)){
-  console.log(key);
-  sumTemp += cities[key].temp;
+const additionalData = {
+  skills: ['Разработка','Дизайн'],
+  CreditCard: 2345234523452345
+};
+
+user = {
+  ...user,
+  ...additionalData
 }
-console.log(sumTemp/citiesCount);
+// user.skills = additionalData.skills;
+
+
+console.log(user);
