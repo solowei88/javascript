@@ -1,28 +1,17 @@
 /*
-Деструктуризация и rest
+Optional chaining
 */
 
 
-let user = {
-  name: 'Вася',
-  age: 40,
-  citi: 'Moskow'
+const cities = {
+  MSK: {
+    temp: {
+      celsius: 20
+    }
+  },
+  SPB: {
+    
+  }
 };
+console.log(cities.SPB?.temp?.celsius);
 
-const {citi, ...userWithouCiti } = user;
-console.log(citi);
-console.log(userWithouCiti);
-
-const additionalData = {
-  skills: ['Разработка','Дизайн'],
-  CreditCard: 2345234523452345
-};
-
-user = {
-  ...user,
-  ...additionalData
-}
-// user.skills = additionalData.skills;
-
-
-console.log(user);
