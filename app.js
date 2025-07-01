@@ -1,47 +1,30 @@
 /*
-Упражнение - кошелёк
+Итерирование по объекту
 */
 
 
-const wallet = 
-    {
-        balance: 0,
-        operations: [], 
+const cities = {
+      msk:{
+        temp: 25,
+        lt: 200
+      },
+      spb:{
+        temp: 20,
+        lt: 100
+      }
+       
+}
+let sumTemp = 0;
+let citiesCount = Object.keys(cities).length;
+// // for (const key in cities){
+// //   console.log(key);
+// //   sumTemp += cities[key].temp;
+// // }
 
-        positive: function (description, sum) {
-            this.balance = this.balance + sum;
-            const operation = ['операция: ' + description, 'сумма: ' + sum];
-        this.operations.push(operation);
-        return true;
-        },
+// console.log(sumTemp/citiesCount);
 
-        negative: function (description, sum) {
-            if (this.balance < sum ){
-                console.log('Недостаточно средств');
-                return false;
-            }
-            this.balance -= sum;
-            const operation = ['операция: ' + description, 'сумма: ' + sum];
-            this.operations.push({
-                операция: description,
-                сумма: sum,
-            });
-            return true;
-            
-        },
-        
-        identificaton: function () {
-            return this.operations.length;
-        },
-            
-        
-    }
-;
-wallet.positive('sgs', 65);
-console.log(wallet.balance);
-wallet.negative('sgsв', 64);
-
-console.log(wallet.balance);
-console.log(wallet.operations);
-console.log(wallet.identificaton());
-
+for (const key of Object.keys(cities)){
+  console.log(key);
+  sumTemp += cities[key].temp;
+}
+console.log(sumTemp/citiesCount);
